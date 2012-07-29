@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %><br />
+    <%= f.label :first_name, "Etunimi" %><br />
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br />
+    <%= f.label :last_name, "Sukunimi" %><br />
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :jersey_number %><br />
+    <%= f.label :jersey_number, "Paidan numero" %><br />
     <%= f.number_field :jersey_number %>
   </div>
   <div class="field">
-    <%= f.label :dob %><br />
+    <%= f.label :dob, "Syntymäaika" %><br />
     <%= f.date_select :dob %>
   </div>
   <div class="field">
-    <%= f.label :position %><br />
+    <%= f.label :position, "Pelipaikka" %><br />
     <%= f.text_field :position %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Tallenna" %>
   </div>
 <% end %>

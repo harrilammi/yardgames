@@ -83,7 +83,7 @@ class PlayersController < ApplicationController
     @player.destroy
 
     respond_to do |format|
-      format.html { redirect_to team_players_url(team) }
+      format.html { redirect_to team_players_url(@team) }
       format.json { head :ok }
     end
   end

@@ -1,23 +1,21 @@
-<h1>Listing teams</h1>
+<h1>Joukkueet</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th></th>
+    <th>Nimi</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @teams.each do |team| %>
   <tr>
-    <td><%= team.name %></td>
-    <td><%= link_to 'Show', team %></td>
-    <td><%= link_to 'Edit', edit_team_path(team) %></td>
-    <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to team.name, team_players_url(team) %></td>
+    <td><%= link_to 'Muokkaa', edit_team_path(team) %></td>
+    <td><%= link_to 'Poista', team, method: :delete, data: { confirm: 'Haluatko varmasti poistaa joukkueen?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Team', new_team_path %>
+<%= link_to 'Uusi joukkue', new_team_path %>
