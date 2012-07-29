@@ -1,4 +1,6 @@
 Yardgames::Application.routes.draw do
+  resources :teams
+
   resources :teams do
     resources :players
   end
