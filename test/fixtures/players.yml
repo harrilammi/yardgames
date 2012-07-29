@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  jersey_number: 1
+  dob: 2012-07-29
+  position: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  jersey_number: 1
+  dob: 2012-07-29
+  position: MyString

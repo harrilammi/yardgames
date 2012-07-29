@@ -1,0 +1,31 @@
+<h1>Listing players</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Jersey number</th>
+    <th>Dob</th>
+    <th>Position</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @players.each do |player| %>
+  <tr>
+    <td><%= player.first_name %></td>
+    <td><%= player.last_name %></td>
+    <td><%= player.jersey_number %></td>
+    <td><%= player.dob %></td>
+    <td><%= player.position %></td>
+    <td><%= link_to 'Show', [player.team, player] %></td>
+    <td><%= link_to 'Edit', edit_team_player_path(player.team, player) %></td>
+    <td><%= link_to 'Destroy', [player.team, player], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Player', new_team_player_path(params[:team_id]) %>
