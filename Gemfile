@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
 gem 'nested_scaffold'
+gem 'slim'
+gem 'slim-rails'
+gem 'twitter-bootstrap-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -24,3 +27,4 @@ end
 
 gem 'jquery-rails'
 gem 'pg'
+
