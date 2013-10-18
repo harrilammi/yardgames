@@ -1,4 +1,7 @@
 Yardgames::Application.routes.draw do
+  resources :games
+
+
   resources :teams
 
   resources :teams do
