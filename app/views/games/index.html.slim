@@ -1,0 +1,14 @@
+h1 Pelit
+
+h3 Luo uusi peli
+
+= form_for(@game, :html => {:class => 'form-horizontal'}) do |f|
+  .form-group
+    = f.label :home_team_id, "Kotijoukkue"
+    = f.collection_select :home_team_id, @teams, :id, :name, :class => "form-control"
+
+  .form-group
+    = f.label :visitor_team_id, "Vierasjoukkue"
+    = f.collection_select(:visitor_team_id, @teams, :id, :name, {}, {:class => "form-control"})
+
+  = f.submit 'Tallenna', :class => 'btn btn-default'
