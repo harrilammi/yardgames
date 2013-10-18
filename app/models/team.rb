@@ -1,4 +1,5 @@
 class Team < ActiveRecord::Base
-  has_many :players
   attr_accessible :name
+  
+  has_many :players
 end
