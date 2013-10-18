@@ -3,6 +3,7 @@ class GamesController < ApplicationController
   def index
     @game = Game.new
     @teams = Team.all
+    @games = Game.all
   end
 
   def create

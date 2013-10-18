@@ -12,3 +12,20 @@ h3 Luo uusi peli
     = f.collection_select(:visitor_team_id, @teams, :id, :name, {}, {:class => "form-control"})
 
   = f.submit 'Tallenna', :class => 'btn btn-default'
+
+h3 Pelit
+
+table.table.table-striped
+  tr
+    th Koti
+    th
+    th Vieras
+    th Tulos
+    th 
+  - @games.each do |game|
+    tr
+      td= game.home_team.name
+      td -
+      td= game.visitor_team.name
+      td= game.result
+      td= link_to "Muokkaa", edit_game_path(game)
