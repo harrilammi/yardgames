@@ -1,0 +1,11 @@
+.left {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+.team-container {
+	padding: 10px;
+}

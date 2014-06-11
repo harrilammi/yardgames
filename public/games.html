@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Jokerit - Ilves</title>
+		<meta charset="utf-8">
+		<link type="text/css" rel="stylesheet" media="all" href="games.css">
+    <script type="text/javascript" src="knockout-3.0.0.debug.js"></script>
+	</head>
+	<body>
+		<h2>Jokerit - Ilves <span data-bind="text: home_goals().length"></span>-0</h3>
+  	<div>
+  		<div class="team-container left">
+  			<div><b>Jokerit</b></div>
+  			<div id="home_team_goals"></div>
+  			<div>
+          <table>
+            <thead>
+              <tr>
+                <th>Maalintekijä</th>
+                <th>Syöttäjä 1</th>
+                <th>Syöttäjä 2</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody data-bind="foreach: home_goals">
+              <tr>
+                <td><select data-bind="options: $root.homeTeamPlayers, value: id, optionsText: 'player_name'"></select></td>
+                <td><input data-bind="value: scorer_id" /></td>
+                <td><input data-bind="value: passer1_id" /></td>
+                <td><input data-bind="value: passer2_id" /></td>
+                <td><a href="#" data-bind="click: $root.removeHomeGoal">Poista</a></td>
+              </tr>    
+            </tbody>
+          </table>
+
+          <button data-bind="click: addHomeGoal">Maali</button>
+        </div>
+  		</div>
+  		<div class="team-container left">
+  			<div><b>Ilves</b></div>
+  			<div id="visitor_team_goals"></div>
+  		</div>
+  		<div class="clear">
+  	</div>
+    <script type="text/javascript" src="games.js"></script>
+	</body>
+</html>
